@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html
+  id="mainHTML"
+  lang="en"
+>
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- all links -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="mediaquery.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/fa7490a094.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images//favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="/site.webmanifest"
+    />
+
+    <!-- title -->
+    <title>Quantum Cars - We Showcase Top Cars</title>
+
+    <!-- font import -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header
+      class="nav-container"
+      id="mainhead"
+    >
+      <div class="logo">
+        <a href="/">QB</a>
+      </div>
+      <nav class="navigation">
+        <ul class="nav-items-container">
+          <li class="nav-items hover-underline-animation">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-items hover-underline-animation">
+            <a href="#featured">Featured</a>
+          </li>
+          <li class="nav-items hover-underline-animation">
+            <a href="/">About</a>
+          </li>
+          <li class="nav-items hover-underline-animation">
+            <a href="/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-last-container">
+        <button
+          id="dark-button"
+          onclick="darkMode()"
+        >
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div
+          class="hamburger"
+          id="hamburgerico"
+          onclick="mobNav()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <nav
+        class="mob-nav"
+        id="mobile"
+      >
+        <ul>
+          <li class="nav-items">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-items">
+            <a href="#featured">Featured</a>
+          </li>
+          <li class="nav-items">
+            <a href="/">About</a>
+          </li>
+          <li class="nav-items">
+            <a href="/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-info">
+        <h2>Welcome to Quantum Cars</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+          exercitationem animi beatae dolorem molestiae Lorem ipsum, dolor sit
+          amet consectetur adipisicing elit. Quas, sunt.
+        </p>
+        <button>
+          <span>Featured Cars </span><i class="fa-solid fa-car"></i>
+        </button>
+      </div>
+      <div
+        class="hero-img-container"
+        id="hero-container"
+      >
+        <img
+          src="/images/QUANTUMLIGHT.png"
+          alt=""
+          id="heroimg"
+        />
+      </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section
+      class="featured-section"
+      id="featured"
+    >
+      <div class="featured-heading">
+        <span>Best in Showcase</span>
+        <h2>Featured Cars</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum
+          dicta commodi repellendus perferendis libero inventore? Lorem ipsum
+          dolor, sit amet
+        </p>
+      </div>
+      <div class="featured-cards-container">
+        <div class="card-container"></div>
+      </div>
+    </section>
+
+    <!-- Script -->
+    <script src="index.js"></script>
+  </body>
+</html>

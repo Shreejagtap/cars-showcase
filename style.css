@@ -1,0 +1,236 @@
+:root {
+  --primary: #e9e9e9;
+  --secondary: #0a0a0a;
+  --text-primary: #000000;
+  --text-secondary: #525252;
+}
+.dark {
+  --primary: #0a0a0a;
+  --secondary: #e9e9e9;
+  --text-primary: #ffffff;
+  --text-secondary: #cccbcb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.nav-container {
+  position: sticky;
+  z-index: 20;
+  background-color: var(--primary) 0.2;
+  top: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.white-shadow {
+  box-shadow: rgba(94, 94, 94, 0.24) 0px 3px 8px;
+}
+
+.logo {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: 700;
+  a {
+    color: var(--text-primary);
+  }
+}
+
+.navigation {
+  flex: 1;
+}
+
+.nav-items-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.1rem;
+  a {
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: all;
+    transition-duration: 300ms;
+  }
+  a:hover {
+    color: var(--text-secondary);
+  }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--secondary);
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.header-last-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  button {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 300ms;
+  }
+}
+.hamburger {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+}
+
+.mob-nav {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: var(--primary);
+  align-items: center;
+  justify-content: center;
+  ul {
+    text-align: center;
+    li {
+      padding: 10px;
+      a {
+        color: var(--text-primary);
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.open {
+  display: flex;
+}
+
+/* hero section */
+
+.hero {
+  padding: 0 10%;
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  gap: 20px;
+}
+
+.hero-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+  }
+  button {
+    padding: 10px 20px;
+    width: max-content;
+    font-size: 1rem;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    border-radius: 4px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    gap: 10px;
+  }
+  button:hover {
+    color: var(--text-primary);
+    background-color: var(--primary);
+  }
+}
+
+.hero-img-container {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  img {
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+    aspect-ratio: 1/1;
+  }
+}
+
+/* featured Section */
+
+.featured-section {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 60%;
+  text-align: center;
+  color: var(--text-primary);
+  span {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+  }
+}
